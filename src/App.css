@@ -1,0 +1,107 @@
+/* App.css */
+
+/* General styling */
+body {
+  background-color: #f0f0f0; /* Fallback color */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background-image: url("starwars2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Minimum height to cover the viewport */
+  overflow: hidden; /* Hide vertical scrollbar */
+  position: relative; /* Make the App container a reference for absolute positioning */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 50px;
+  color: white; /* Text color */
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust card width with a little gap */
+  grid-gap: 20px; /* Add gap between cards */
+  justify-items: center;
+  max-width: 1200px; /* Limit grid width to prevent overflow */
+  width: 100%; /* Ensure grid takes full width */
+  padding: 20px; /* Add padding to the grid */
+  margin-top: 0px;
+}
+
+.character-card {
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  height: 200px; /* Adjust card height */
+  width: 200px; /* Adjust card width */
+  position: relative;
+}
+
+.character-card h3 {
+  margin: 0;
+  color: white; /* Change character name color to white */
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.character-card img {
+  width: 180px; /* Increase image size */
+  height: 180px; /* Increase image size */
+  border-radius: 5px; /* Make the image square with rounded corners */
+  margin-bottom: 10px;
+}
+
+.character-info-overlay {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px; /* Add padding to the overlay */
+}
+
+.character-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%; /* Limit the width of the info box */
+  max-height: 80%; /* Limit the height of the info box */
+  overflow: auto;
+  text-align: center;
+  position: relative;
+}
+
+  
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.close:hover {
+  color: #000;
+}
