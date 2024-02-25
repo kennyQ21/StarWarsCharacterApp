@@ -50,7 +50,13 @@ h1 {
   height: 200px; /* Adjust card height */
   width: 200px; /* Adjust card width */
   position: relative;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
 }
+
+.character-card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
 
 .character-card h3 {
   margin: 0;
